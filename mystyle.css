@@ -1,0 +1,110 @@
+.header{
+	background-color:black;
+
+}
+hr{
+	display:none;
+}
+  @media screen and (max-width: 765px) { 
+    hr {
+     display: block;
+
+    }
+    .subtitle{
+    	line-height: 0.5em;
+    }
+ }
+
+.subtitle-line{
+	position: relative;
+}
+ @media screen and (max-width: 765px) { 
+    .subtitle:before,.subtitle:after {
+     display: none;
+    }
+ }
+
+.subtitle:before,.subtitle:after{
+	position:absolute;
+	top:50%;
+	background: #ddd;
+	content:"";
+	height: 2px;
+	width: 32%;
+}
+.subtitle:before{
+	left:0px;
+}
+.subtitle:after{
+	right:0px;
+}
+.title-footer{
+	 background-image: url("http://thub.sssccc.net/%E8%B4%B4%E5%9B%BE%E6%9D%90%E8%B4%A8/high/%E4%B8%93%E4%B8%9A%E5%BB%BA%E7%AD%91/21.%E9%87%91%E5%B1%9E%E7%BA%B9%E7%90%86.Metal/21.%E9%87%91%E5%B1%9E%E7%BA%B9%E7%90%86.Metal_0020.jpg");
+  background-repeat: repeat-x;
+  height: 80px;
+}
+.head-border{
+	border-bottom:3px solid #BBBABA;
+	padding:5px;
+	 
+}
+.works,.contact{
+	background-color: #222;
+}
+
+.bg-cover{
+	
+	background-position:center center;
+	background-size:cover;
+	height: 210px;
+	
+}
+
+  @media screen and (max-width: 400px) { 
+    .bg-cover {
+     height: 200px;
+       
+    }
+ }
+.works-img{
+  padding: 0;
+
+}
+.hovericon{
+	line-height: 210px;
+  opacity:0;
+  transition:all .5s;
+}
+.bg-cover:hover .hovericon{
+  background-color:#87C3C4;
+  width:100%;
+  height: 100%;
+  opacity:0.7;
+  
+}
+
+.works-word{
+  padding: 0!important;
+}
+i>.fa-link{
+	color:white;
+}
+.skillicon{
+color:gold;
+border: 4px solid;
+border-radius: 50%;
+padding:40px;
+}
+
+.btn-dark:hover{
+	animation: shake;
+	animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+}
+
+.yourElement {
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-iteration-count: 2;
+}
