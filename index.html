@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-  <link rel="stylesheet" href="mystyle.css">
+  <link rel="stylesheet" href="css/mystyle.css">
   <link href="https://fonts.googleapis.com/css?family=Autour+One" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 	
@@ -20,21 +20,25 @@
 </head>
 <body>
 	<!--nav-->
-	<nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
-  <a class="navbar-brand" href="#header">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">  
-      <a class="nav-item nav-link active" href="#header">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link"  href="#about">About</a>
-      <a class="nav-item nav-link" href="#works">Works</a>
-      <a class="nav-item nav-link" href="#skills">Skills</a>
-      <a class="nav-item nav-link" href="#contact">Contact</a>
-    </div>
+	 <div class="nav">
+  <div class="burger">
+  <span class="sp1"></span>
+    <span class="sp2"></span>
+    <span class="sp3"></span>
   </div>
-</nav>
+    <h2>Profile</h2>
+</div>
+ <div class="menu">
+   <ul>
+     <li><a href="#header">Top</a></li>
+     <li><a href="#about">about me</a></li>
+     <li><a href="#works">works</a></li>
+     <li><a href="#skills">my skills</a></li>
+     <li><a href="#contact">contact</a></li>
+   </ul>
+ </div>
+  
+ 
 
 
 	<!--header-->
@@ -151,9 +155,9 @@
 	<div class="container">
 		<h2 class="head-border mb-5 d-inline-block wow bounce">MY SKILLS</h2>
 		<div class="container">
-		<div class="row wow bounce">
+		<div class="row ">
 			
-			<div class="col-md-4  mt-5">
+			<div class="col-md-4  mt-5 wow bounce">
 				<i class="fas fa-code fa-4x mb-3 skillicon"></i>
 				<h5 class="mb-3">Code</h5>
 				<p>Lorem ipsum dolor.<br>
@@ -162,7 +166,7 @@
 				</p>
 			</div>
 
-						<div class="col-md-4  mt-5">
+						<div class="col-md-4  mt-5 wow bounce">
 				<i class="fas fa-splotch fa-4x mb-3 skillicon"></i>
 				<h5 class="mb-3">Idea</h5>
 				<p>Lorem ipsum dolor.<br>
@@ -171,7 +175,7 @@
 				</p>
 			</div>
 
-						<div class="col-md-4  mt-5">
+						<div class="col-md-4  mt-5 wow bounce">
 				<i class="fas fa-pencil-alt fa-4x mb-3 skillicon"></i>
 				<h5 class="mb-3">Design</h5>
 				<p>Lorem ipsum dolor.<br>
@@ -214,15 +218,28 @@
 
 
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="
-https://cdnjs.cloudflare.com/ajax/libs/jquery-one-page-nav/3.0.0/jquery.nav.min.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 <script>
 $(function(){
 	new WOW().init();
+});
+$(document).ready(function(){
+  $('.burger').click(function(){
+   $('.sp1').toggleClass('sp1-x');
+   $('.sp3').toggleClass('sp3-x');
+  $('.sp2').toggleClass('sp2-x');
+ $('.menu').slideToggle();
+   $('.nav').toggleClass('navgodark');    
+  }); 
+      $('.menu li').click(function(){
+        $('.menu').slideToggle();
+        $('.sp1').toggleClass('sp1-x');
+   $('.sp3').toggleClass('sp3-x');
+  $('.sp2').toggleClass('sp2-x');
+
+   $('.nav').toggleClass('navgodark'); 
+      });
 });
 
 </script>
